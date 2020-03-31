@@ -147,6 +147,3 @@ def BFTRecLinkedList(graph):
 def BFTIterLinkedList(graph):
     search = GraphSearch(graph)
     bfti = search.BFTIter(graph)
-
-linked2 = createLinkedList(100)
-BFTRecLinkedList(linked2)
