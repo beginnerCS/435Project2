@@ -31,8 +31,12 @@ class Graph():
         self.graphDict[first] += (second,)
 
     def removeUndirectedEdge(self, first, second):
-        self.graphDict[first].replace(second,'')
-        self.graphDict[second].replace(first, '')
+        listF = list(self.graphDict[first])
+        listS = list(self.graphDict[second])
+        listF.remove(second)
+        listS.remove(first)
+        self.graphDict[first] = tuple(listF)
+        self.graphDict[second] = tuple(listS)
 
     def getAllNodes(self):
         return self.graphSet
